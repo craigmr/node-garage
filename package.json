@@ -1,0 +1,7 @@
+{
+  "name": "node-pi-garage",
+  "dependencies": {
+    "pi-gpio": "0.0.2",
+    "express": "3.x"
+  }
+}
