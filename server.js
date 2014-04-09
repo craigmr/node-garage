@@ -9,7 +9,7 @@
     app.use(express.urlencoded());
 
     //API
-    app.get('/garage', function(req, res){
+    app.get('/door', function(req, res){
         garage.isOpen(function(err, open){
             if(err){
                 return res.status(500).send({"error" : err.toString()});
@@ -18,7 +18,7 @@
         });
     });
 
-    app.put('/garage', function(req, res){
+    app.put('/door', function(req, res){
         if(typeof req.body.open === 'boolean'){
             if(req.body.open){
                 activateGarage(true, res);
